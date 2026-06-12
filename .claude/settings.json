@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "Bash(cd \"/c/Users/huawei/Desktop/Projects/Elecrtic Menu\" && rm -f src/App.css src/assets/react.svg src/assets/vite.svg src/assets/hero.png && ls public)",
+      "Bash(cd \"/c/Users/huawei/Desktop/Projects/Elecrtic Menu\" && rm -f public/icons.svg public/favicon.svg && ls public src/assets 2>/dev/null)",
+      "Bash(npm run *)",
+      "Bash(curl -sf http://localhost:5173)",
+      "Bash(node scripts/screenshot.mjs)",
+      "Bash(curl -sI \"https://images.unsplash.com/photo-1585478259715-876acc5be8eb?q=80&w=1200&auto=format&fit=crop\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://images.unsplash.com/photo-1567306301408-9b74779a11af?q=80&w=1200&auto=format&fit=crop\")",
+      "Bash(rm -rf scripts screenshots)",
+      "Bash(npm uninstall *)",
+      "Bash(pkill -f \"vite\")",
+      "Bash(cd \"/c/Users/huawei/Desktop/Projects/Elecrtic Menu\" && rm -rf dist && find src -type f | sort)",
+      "Bash(npx tsc *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5174/)",
+      "Bash(node screenshot.mjs)",
+      "Bash(npm root *)",
+      "Bash(node -e \"console.log\\(require.resolve\\('playwright'\\)\\)\")",
+      "Bash(npm config *)",
+      "Bash(ls \"$\\(npm config get cache\\)/_npx\")",
+      "Bash(npx -y -p playwright node screenshot.mjs)",
+      "Bash(node test-image.mjs)",
+      "Bash(rm -f screenshot.mjs test-image.mjs)",
+      "Bash(rm -rf screenshots)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5176/)",
+      "Bash(node screenshot-sizes.mjs)",
+      "Bash(npm view *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5176/)",
+      "Bash(node screenshot-masonry.mjs)"
+    ],
+    "additionalDirectories": [
+      "c:\\c\\Users\\huawei\\Desktop\\Projects\\Elecrtic Menu\\src",
+      "c:\\c\\Users\\huawei\\Desktop\\Projects\\Elecrtic Menu\\public",
+      "c:\\c\\Users\\huawei\\Desktop\\Projects\\Elecrtic Menu"
+    ]
+  }
+}
