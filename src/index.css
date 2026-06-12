@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  /* Typography */
+  --font-display: "Cairo", "Segoe UI", system-ui, sans-serif;
+  --font-sans: "Cairo", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  /* Warm, bright "Editorial Luxury" palette — soft cream cafe aesthetic */
+  --color-cream-50: #fffdf9;
+  --color-cream-100: #fbf6ee;
+  --color-cream-200: #f6efe2;
+  --color-cream-300: #efe4d2;
+  --color-cream-400: #e4d4bc;
+
+  --color-espresso-50: #f6f1ec;
+  --color-espresso-100: #e8ddd2;
+  --color-espresso-300: #b89a82;
+  --color-espresso-500: #8a6a4f;
+  --color-espresso-700: #5c4530;
+  --color-espresso-900: #382a1d;
+
+  --color-amber-300: #f0c391;
+  --color-amber-400: #e6a85c;
+  --color-amber-500: #d68c45;
+  --color-amber-600: #c2753a;
+
+  --color-sage-400: #9caf88;
+  --color-sage-500: #7e9468;
+
+  /* Easing curves */
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* Shadows — soft, diffused, never harsh */
+  --shadow-soft: 0 1px 2px rgba(90, 64, 40, 0.04), 0 8px 24px -8px rgba(90, 64, 40, 0.12);
+  --shadow-card: 0 2px 8px rgba(90, 64, 40, 0.05), 0 16px 40px -16px rgba(90, 64, 40, 0.16);
+  --shadow-lift: 0 8px 16px rgba(90, 64, 40, 0.08), 0 24px 56px -20px rgba(90, 64, 40, 0.22);
+  --shadow-glass: inset 0 1px 1px rgba(255, 255, 255, 0.6);
+
+  --radius-card: 1.75rem;
+  --radius-pill: 999px;
+}
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    color-scheme: light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background: var(--color-cream-100);
+    color: var(--color-espresso-900);
+    overscroll-behavior-y: none;
+  }
+
+  #root {
+    min-height: 100dvh;
+  }
+
+  ::selection {
+    background: var(--color-amber-300);
+    color: var(--color-espresso-900);
+  }
+
+  /* Slim, elegant scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-espresso-300);
+    border-radius: var(--radius-pill);
+  }
+
+  button {
+    font-family: inherit;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
